@@ -14,7 +14,7 @@
 @import AVFoundation;
 @import AVKit;
 
-@interface WebViewController : UIViewController
+@interface RNWebSdk : UIViewController
 @end
 
 //! Project version number for RNWebSdk.
