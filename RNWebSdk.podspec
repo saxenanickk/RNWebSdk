@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
     s.name             = 'RNWebSdk'
-    s.version          = '0.0.1'
+    s.version          = '0.0.2'
     s.description      = 'RNWebSdk Description'
     s.summary          = 'RNWebSdk Summary'
     s.homepage         = 'https://github.com/saxenanickk/RNWebSdk'
@@ -9,7 +9,7 @@ Pod::Spec.new do |s|
     s.source           = { git: 'https://github.com/saxenanickk/RNWebSdk.git', tag: s.version.to_s }
   
     s.source_files   = 'RNWebSdk/**/*.{h,m,swift,xib}'
-    s.platform       = :ios, '10.0'
+    s.platform       = :ios, '11.0'
   
     s.static_framework = true
   end
