@@ -6,13 +6,16 @@
 //  Copyright © 2020 Nikhil1 Saxena. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
+@import Foundation;
 @import MobileCoreServices;
 @import MediaPlayer;
 @import UIKit;
 @import WebKit;
 @import AVFoundation;
 @import AVKit;
+
+@interface WebViewController : UIViewController
+@end
 
 //! Project version number for RNWebSdk.
 FOUNDATION_EXPORT double RNWebSdkVersionNumber;
