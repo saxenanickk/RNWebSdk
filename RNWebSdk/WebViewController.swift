@@ -14,7 +14,7 @@ import WebKit
 import AVFoundation
 import AVKit
 
-class WebViewController : UIViewController, WKScriptMessageHandler, UINavigationControllerDelegate, UIImagePickerControllerDelegate, WKUIDelegate {
+public class WebViewController : UIViewController, WKScriptMessageHandler, UINavigationControllerDelegate, UIImagePickerControllerDelegate, WKUIDelegate {
     
     @IBOutlet weak var mWebKitView: WKWebView!
     
@@ -42,14 +42,14 @@ class WebViewController : UIViewController, WKScriptMessageHandler, UINavigation
     
     let sampleCSVData = "a%2Cb%2Cc%0A1%2C2%2Cx%0A2%2C1%2Cx%0A3%2C5%2Cy%0A4%2C6%2Cy%0A"
     
-    override func viewDidLoad() {
+    public override func viewDidLoad() {
         super.viewDidLoad()
         
         loadWebView()
         setupWebViewHandler()
     }
     
-    override func viewWillAppear(_ animated: Bool) {
+    public override func viewWillAppear(_ animated: Bool) {
         NotificationCenter.default.addObserver(self, selector: #selector(self.finishedPlaying(notification:)), name: NSNotification.Name.AVPlayerItemDidPlayToEndTime, object: playerItem)
     }
     
@@ -130,7 +130,7 @@ class WebViewController : UIViewController, WKScriptMessageHandler, UINavigation
         //        self.addChild(controller)
     }
     
-    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+    public func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
         picker.dismiss(animated: true)
         
         if let selectedVideo:URL = (info[UIImagePickerController.InfoKey.mediaURL] as? URL) {
@@ -366,7 +366,7 @@ class WebViewController : UIViewController, WKScriptMessageHandler, UINavigation
     }
     
     
-    func userContentController(_ userContentController: WKUserContentController, didReceive message: WKScriptMessage) {
+    public func userContentController(_ userContentController: WKUserContentController, didReceive message: WKScriptMessage) {
         
         do {
             let msgBody = message.body as! String
